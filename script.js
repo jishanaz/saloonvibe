@@ -2,14 +2,14 @@
 // Spotify -> playlist -> ⋯ -> Share -> Copy link to playlist
 // Example: "https://open.spotify.com/playlist/37i9dQZF1DXXXXXXXXXXXX?si=abc"
 // Albums, tracks and artists also work.
-const SPOTIFY_LINK = "<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7tNg3NMlZLpuhGVt0SUxT3?utm_source=generator&si=bc235a543b5f44e8" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>";
+const SPOTIFY_LINK = "https://open.spotify.com/track/7tNg3NMlZLpuhGVt0SUxT3";
 // ==========================================
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
 (function renderSpotify() {
   const box = document.getElementById("spotifyBox");
-  const match = SPOTIFY_LINK.match(/open\.spotify\.com\/(?:intl-[a-z]+\/)?(playlist|album|track|artist|show|episode)\/([A-Za-z0-9]+)/);
+  const match = SPOTIFY_LINK.match(/open\.spotify\.com\/(?:embed\/)?(?:intl-[a-z]+\/)?(playlist|album|track|artist|show|episode)\/([A-Za-z0-9]+)/);
 
   if (!match) {
     box.innerHTML = '<p class="note">Spotify playlist not set yet. Paste your link in <code>SPOTIFY_LINK</code> inside script.js.</p>';
