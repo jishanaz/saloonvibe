@@ -2,7 +2,7 @@
 // Spotify -> playlist -> ⋯ -> Share -> Copy link to playlist
 // Example: "https://open.spotify.com/playlist/37i9dQZF1DXXXXXXXXXXXX?si=abc"
 // Albums, tracks and artists also work.
-const SPOTIFY_LINK = "https://open.spotify.com/track/7tNg3NMlZLpuhGVt0SUxT3";
+const SPOTIFY_LINK = "https://open.spotify.com/playlist/6R1vsvgGKke5UYpiTTBxnh?si=3PP6g5RXR96EbNvvuDEMsw";
 // ==========================================
 
 document.getElementById("year").textContent = new Date().getFullYear();
